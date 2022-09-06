@@ -1,0 +1,137 @@
+@import fonts
+//default setting
+
+$red: '#DC2E3F'
+$dark: #232323
+$text: #303030
+
+::placeholder
+    color: #666
+
+::selection
+    background-color: #DC2E3F
+    color: #fff
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+    &:hover
+        text-decoration: none
+        color: inherit
+
+button, select
+    &:focus
+        outline: none
+
+input, textarea
+    outline: none
+    &:focus:required:invalid
+        border-color: red
+    &:required:valid
+        border-color: green
+
+body
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.15
+    font-family: 'Montserrat', sans-serif
+    overflow-x: hidden
+    color: #303030
+
+.ov-hidden
+    overflow: hidden
+//default setting end
+.header
+    padding: 31px 0 43px
+    &_nav
+        display: flex
+        align-items: center
+        &-wrap
+            display: flex
+            justify-content: space-between
+            width: 100%
+        &-link
+            font-size: 14px
+            font-weight: 600
+            text-transform: uppercase
+            color: inherit
+            img
+                margin-left: 4px
+        &-item
+            color: #6C6C6C
+            position: relative
+            &.active
+                color: #232323
+                &::after
+                    content: ''
+                    position: absolute
+                    top: calc(100% + 9px)
+                    left: 0
+                    height: 2px
+                    width: 16px
+                    background: #DC2E3F
+                    border-radius: 16px
+    &_buttons
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &_button
+        border-radius: 6px
+        padding: 13px 18px 13px 15px
+        display: flex
+        align-items: center
+        color: #fff
+        font-size: 12px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.7px
+        &:hover
+            color: #fff
+        img
+            margin-right: 11px
+    &_register
+        background: #DC2E3F
+        box-shadow: 0px 14px 24px rgba(229, 29, 53, 0.2)
+    &_login
+        background: #232323
+    &_lang
+        border: 2px solid #232323
+        border-radius: 6px
+        cursor: pointer
+        &-top
+            display: flex
+            align-items: center
+            padding: 9px 13px
+        &-text
+            margin: 0 7px 0 11px
+            line-height: 1.2
+            font-size: 12px
+            text-transform: uppercase
+            font-weight: 800
+            padding-top: 3px
+        &-img
+            display: flex
+            
+
+                
+
+@media (min-width: 1400px)
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+        max-width: 1170px
+        
+@media (min-width: 1200px)
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+        max-width: 1170px
+    
+
+// @media (max-width: 1199.90px)
+
+// @media (max-width: 991.90px)
+
+// @media (max-width: 767.90px)
+
+// @media (max-width: 576.90px)
