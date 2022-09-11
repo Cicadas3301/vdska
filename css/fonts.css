@@ -9,14 +9,14 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 200;
-  src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("woff2");
+  src: url("../fonts/Montserrat/Montserrat-Thin.ttf") format("woff2");
 }
 
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/Montserrat/Montserrat-Thin.ttf") format("woff2");
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("woff2");
 }
 
 @font-face {
