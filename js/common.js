@@ -9,11 +9,11 @@ $(document).ready(function () {
 		navText: ['<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.43775 11L7.06229 9.28283L4.3749 6.56451L11 6.56451L11 4.08065L4.7256 4.08065L7.06229 1.71719L5.43775 -2.43134e-07L2.40417e-07 5.49991L5.43775 11Z" fill="white"/></svg>', '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.56225 11L3.93771 9.28283L6.6251 6.56451L-1.93881e-07 6.56451L-3.02454e-07 4.08065L6.2744 4.08065L3.93771 1.71719L5.56225 -2.43134e-07L11 5.49991L5.56225 11Z" fill="white"/></svg>'],
 		responsive: {
 			0: {
-                nav: false,
-                dots: true,
+                nav: true,
+                dots: false,
 			},
 			767: {
-                nav: false,
+                nav: true,
                 dots: false,
 			},
             1200: {
@@ -34,10 +34,10 @@ $(document).ready(function () {
         navText: ['<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.43775 11L7.06229 9.28283L4.3749 6.56451L11 6.56451L11 4.08065L4.7256 4.08065L7.06229 1.71719L5.43775 -2.43134e-07L2.40417e-07 5.49991L5.43775 11Z" fill="white"/></svg>', '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.56225 11L3.93771 9.28283L6.6251 6.56451L-1.93881e-07 6.56451L-3.02454e-07 4.08065L6.2744 4.08065L3.93771 1.71719L5.56225 -2.43134e-07L11 5.49991L5.56225 11Z" fill="white"/></svg>'],
         responsive: {
 			0: {
-                items: 2,
+                items: 1,
 			},
 			767: {
-                items: 2,
+                items: 1,
 			},
             991: {
                 items: 3, 
@@ -86,6 +86,17 @@ $(document).ready(function () {
             dots: true,
             nav: true,
             navText: ['<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.43775 11L7.06229 9.28283L4.3749 6.56451L11 6.56451L11 4.08065L4.7256 4.08065L7.06229 1.71719L5.43775 -2.43134e-07L2.40417e-07 5.49991L5.43775 11Z" fill="white"/></svg>', '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.56225 11L3.93771 9.28283L6.6251 6.56451L-1.93881e-07 6.56451L-3.02454e-07 4.08065L6.2744 4.08065L3.93771 1.71719L5.56225 -2.43134e-07L11 5.49991L5.56225 11Z" fill="white"/></svg>'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                576: {
+                    items: 1,
+                },
+                767: {
+                    items: 2,
+                },
+            }
         });
         jQuery(".news_wrapper").owlCarousel({
             loop: false,
@@ -95,6 +106,17 @@ $(document).ready(function () {
             margin: 30,
             dots: true,
             nav: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                576: {
+                    items: 1,
+                },
+                767: {
+                    items: 2,
+                },
+            }
         });
     }
 
@@ -104,6 +126,17 @@ $(document).ready(function () {
         $('.header_burger-button, .header_burger-active').on('click', function () {
             $('.header_mob, .header_socials, .header_burger, .header_buttons').toggleClass('active');
             $('body').toggleClass('ov-hidden');
+        })
+        $('.calc_right-title, .calc_right-btn, .calc_right-price, .calc_right-select').appendTo('.calc_left')
+        $('.calc_right-btn').on('click', function () {
+            $('.calc_right-price').addClass('active');
+        })
+        $('.calc_right-button').appendTo('.calc_right-price')
+        $('.footer_social').appendTo('.footer_left-top')
+        $('.footer_social-links').appendTo('.footer_left')
+        $('.header_nav-link--toggle').on('click', function () {
+            event.preventDefault();
+            $(this).siblings('.header_nav-list').toggleClass('active');
         })
     }
 
